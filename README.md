@@ -6,6 +6,7 @@ This website is a work in progress! I plan to have the following features in my 
 - WebVR via A-Frame
 - Responsive CSS
 - AR Business Code Scanner (mobile/tablet only)
+
 Stay tuned for (hopefully soon) updates! 🌞
 ---
 ## Website Roadmap
