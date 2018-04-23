@@ -7,59 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
     <style>
-    a-scene {
-      height: 600px;
-      width: auto;
-      z-index: 0;
-    }
+      body {
+        padding: 0%;
+        overflow: hidden;
+      }
+      canvas {
+        background: red;
+      }
     </style>
   </head>
+
   <body>
-    <a-scene embedded>
-      <a-assets>
-        <a-mixin
-          id="marker"
-          geometry="primitive: plane; width: 0.057; height: 0.057"
-          material="color: #C03546"
-        ></a-mixin>
-      </a-assets>
+    <div id="threejs">
+        <canvas id="canvas"></canvas>
+        <script src="node_modules/three/build/three.js"></script>
+        <script>
+          var renderer = new THREE.WebGLRenderer( { 
+            canvas: document.getElementById( "canvas" ),
+            antialias: true
+          } );
+          renderer.setClearColor( 0x00ff00 );
+          renderer.setPixelRatio( window.devicePixelRatio );
+          renderer.setSize( window.innerWidth, window.innerHeight );
 
-      <a-entity text="value: manifesting world;"></a-entity>
+          var camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 3000 );
 
-      <a-box position="0 3 -3" rotation="0 45 0" color="#4CC3D9">
-        <a-animation attribute="rotation"
-          dur="6000"
-          to="0 360 360"
-          repeat="indefinite"
-          easing="linear"></a-animation>
-      </a-box>
+          var scene = new THREE.Scene();
 
-      <!-- Pillar forest -->
-      <a-cylinder position="3 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="3 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="3 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
+          //create box
+          var box = new THREE.BoxGeometry( 10, 10, 10 );
+          var material = new THREE.MeshLambertMaterial( { color: 0xff23ff } );
+          var mesh = new THREE.Mesh( box, material );
+          mesh.position.set( 0, 0, -50 );
 
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="10" color="#00ff00"></a-plane>
+          scene.add( mesh );
 
-      <a-circle color="orange" radius="5" position="0 0 -11" rotation="0 0 0"></a-circle>
-      <a-sky color="#fcefff"></a-sky>
-    </a-scene>
+          //requestAnimationFrame( animate );
+
+          //animates box spinning
+          //function animate(){
+
+            renderer.render( scene, camera );
+          //}
+        </script>
+    </div>
+    
   </body>
 </html>
