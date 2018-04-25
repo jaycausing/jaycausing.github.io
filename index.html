@@ -1,65 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>j a y c a u s i n g</title>
-    <meta name="description" content="some scrub's game dev portfolio site">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <style>
-    a-scene {
-      height: 600px;
-      width: auto;
-      z-index: 0;
+<head>
+  <meta charset="utf-8">
+  <title>j a y c a u s i n g</title>
+  <meta name="description" content="some scrub's game dev portfolio site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
+
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
     }
-    </style>
-  </head>
-  <body>
-    <a-scene embedded>
-      <a-assets>
-        <a-mixin
-          id="marker"
-          geometry="primitive: plane; width: 0.057; height: 0.057"
-          material="color: #C03546"
-        ></a-mixin>
-      </a-assets>
 
-      <a-entity text="value: manifesting world;"></a-entity>
+    canvas {
+      background-color: red;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-      <a-box position="0 3 -3" rotation="0 45 0" color="#4CC3D9">
-        <a-animation attribute="rotation"
-          dur="6000"
-          to="0 360 360"
-          repeat="indefinite"
-          easing="linear"></a-animation>
-      </a-box>
+    .wrapper {
+      display: grid;
+      flex-direction: row;
 
-      <!-- Pillar forest -->
-      <a-cylinder position="3 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="3 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="3 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-3 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="6 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-6 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -3" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -5" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="9 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
-      <a-cylinder position="-9 0.75 -7" radius="0.25" height="5" color="#ffff00"></a-cylinder>
+    }
 
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="10" color="#00ff00"></a-plane>
+    .item{
+      flex: 1;
+    }
+  </style>
+</head>
 
-      <a-circle color="orange" radius="5" position="0 0 -11" rotation="0 0 0"></a-circle>
-      <a-sky color="#fcefff"></a-sky>
-    </a-scene>
-  </body>
+<body>
+
+  <script src="node_modules/three/build/three.min.js"></script>
+
+  <div class="wrapper">
+    <div class="item" id="title">
+      
+    </div>
+    <canvas class="item" id="canvas"></canvas>
+    <script src="js/tempIndex.js"></script>
+  </div>
+
+</body>
+
 </html>

@@ -19,5 +19,9 @@
     "aframe-scene",
     "webvr",
     "vr"
-  ]
+  ],
+  "dependencies": {
+    "jshint": "^2.9.5",
+    "three": "^0.91.0"
+  }
 }
