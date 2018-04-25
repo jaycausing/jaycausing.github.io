@@ -1,0 +1,42 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+canvas {
+    background-color: plum;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.row,
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    flex-direction: column;
+}
+
+/*.row {
+    flex-flow: row wrap;
+}*/
+
+.item {
+    flex: 1;
+}
+
+div#content {
+   /* display: flex;*/
+    z-index: 1;
+    position: absolute;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+div#sm-links {
+    flex-flow: row wrap;
+}
