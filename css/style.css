@@ -1,6 +1,7 @@
 body {
     padding: 0px;
     margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* TODO: Get font styles for website */
@@ -29,18 +30,24 @@ canvas {
 
 .item {
     flex: 1;
+    padding: 5px;
+    margin: 5px;
 }
 
 div#content {
    /* display: flex;*/
     z-index: 1;
-    position: absolute;
+    position: fixed;
     align-items: center;
-    /*justify-content: center;*/
+    width: 100%;
 }
 
 div#sm-links {
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    font-size: 5em;
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 90%;
 }
 
 /* TODO: Add interactive CSS for social media links */
