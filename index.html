@@ -24,19 +24,25 @@
 
     .row, .wrapper {
       display: flex;
+      justify-content: center;
     }
 
     .wrapper {
       flex-direction: column;
     }
 
-    .row {
-      justify-content: center;
+    div.row {
       flex-flow: row wrap;
+      align-items: center;
     }
 
-    .item{
+    .item {
       flex: 1;
+    }
+
+    div#content {
+      z-index: 1;
+      position: absolute;
     }
   </style>
 </head>
@@ -46,14 +52,21 @@
   <script src="node_modules/three/build/three.min.js"></script>
 
   <div class="wrapper">
-    <div class="row" id="title">
-      
+    <div id="threejs">
+      <canvas class="item" id="canvas"></canvas>
+      <script src="js/tempIndex.js"></script>
     </div>
-    <canvas class="item" id="canvas"></canvas>
-    <script src="js/tempIndex.js"></script>
 
-    <div class="row" id="sm-links">
-      
+    <div id="content">
+        <div class="row" id="title">
+          <h1>jay causing</h1>
+        </div>
+        <div class="row" id="sm-links">
+          <div class="item"><a href="https://github.com/jaycausing">Github</a></div>
+          <div class="item"><a href="https://twitter.com/kanniet_exe">Twitter</a></div>
+          <div class="item"><a href="https://www.linkedin.com/in/jennifer-anne-causing-248174b3">LinkedIn</a></div>
+          <div class="item"><a href="mailto:jen.causing95@gmail.com">Email</a></div>
+        </div>
     </div>
   </div>
 
