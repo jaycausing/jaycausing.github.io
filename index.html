@@ -1,71 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>j a y c a u s i n g</title>
-    <meta name="description" content="some scrub's game dev portfolio site">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
+<head>
+  <meta charset="utf-8">
+  <title>j a y c a u s i n g</title>
+  <meta name="description" content="some scrub's game dev portfolio site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-      body { padding: 0px; margin: 0px; }
-      canvas {
-        background-color: red;
-        width: 100%;
-        height: 100%;
-      }
-      .wrapper {
-        display: grid;
-      }
-    </style>
-  </head>
+  <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 
-  <body>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
 
-    <script src="node_modules/three/build/three.js"></script>
+    canvas {
+      background-color: red;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-    <div class="wrapper">
-        <canvas id="canvas"></canvas>
+    .wrapper {
+      display: grid;
+      flex-direction: row;
 
-        <script src="tempIndex.js">
+    }
 
-          init();
+    .item{
+      flex: 1;
+    }
+  </style>
+</head>
 
-          //ensures object faces not hit by dLight still visible
-          var light = new THREE.AmbientLight( 0xffffff, 0.5 );
-          scene.add( light );
+<body>
 
-          var dLight = new THREE.DirectionalLight();
-          scene.add( dLight );
+  <script src="node_modules/three/build/three.min.js"></script>
 
-          var boxGeo = new THREE.BoxGeometry( 3, 3, 3 );
-          var mat = new THREE.MeshNormalMaterial();
-          var boxObj = new THREE.Mesh( boxGeo, mat );
-          scene.add( boxObj );
-
-          //background circles
-          var cMesh = new THREE.CircleGeometry( 10, 30 );
-
-          var mat = new THREE.MeshBasicMaterial({ color: 0xc0c0c0});
-
-          var cObj1 = new THREE.Mesh( cMesh, mat );
-          cObj1.position.set( -20, 0, -10 );
-          var cObj2 = new THREE.Mesh( cMesh, mat );
-          cObj2.position.set( 0, 0, -10 );
-          var cObj3 = new THREE.Mesh( cMesh, mat );
-          cObj3.position.set( 20, 0, -10 );
-
-          var cGroup = new THREE.Group();
-          cGroup.add( cObj1 ); cGroup.add( cObj2 ); cGroup.add( cObj3 );
-          scene.add( cGroup );
-
-          animate();
-
-          window.addEventListener("resize", onWindowResize);
-
-        </script>
+  <div class="wrapper">
+    <div class="item" id="title">
+      
     </div>
-    
-  </body>
+    <canvas class="item" id="canvas"></canvas>
+    <script src="js/tempIndex.js"></script>
+  </div>
+
+</body>
+
 </html>
