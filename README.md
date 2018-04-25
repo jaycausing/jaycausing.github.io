@@ -13,8 +13,9 @@ Stay tuned for (hopefully soon) updates! 🌞
 | Feature | Status |
 | :--- | ---: |
 | Base website | *In Progress* |
-| A-Frame | *In Progress* |
-| "About Me" Page | |
+| ~~A-Frame~~ | **Scrapped for three.js** |
+| three.js |  |
+| "About Me" Page | **Complete** |
 | Contact/Social Media Links | |
 | Responsive CSS | |
 | Project Uploads | |
