@@ -16,16 +16,23 @@
     }
 
     canvas {
-      background-color: red;
+      background-color: plum;
       width: 100%;
       height: 100%;
       z-index: -1;
     }
 
-    .wrapper {
-      display: grid;
-      flex-direction: row;
+    .row, .wrapper {
+      display: flex;
+    }
 
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .row {
+      justify-content: center;
+      flex-flow: row wrap;
     }
 
     .item{
@@ -39,11 +46,15 @@
   <script src="node_modules/three/build/three.min.js"></script>
 
   <div class="wrapper">
-    <div class="item" id="title">
+    <div class="row" id="title">
       
     </div>
     <canvas class="item" id="canvas"></canvas>
     <script src="js/tempIndex.js"></script>
+
+    <div class="row" id="sm-links">
+      
+    </div>
   </div>
 
 </body>
