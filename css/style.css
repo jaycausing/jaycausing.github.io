@@ -1,53 +1,66 @@
 body {
     padding: 0px;
     margin: 0px;
+    /*display: flex;*/
     font-family: 'Open Sans', sans-serif;
 }
 
-/* TODO: Get font styles for website */
-
 canvas {
-    background-color: plum;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(#ff3300, #0033ff);
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
 }
 
-.row,
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* .wrapper {
+    padding: 0px;
+    margin: 0px;
+    flex-flow: row nowrap;
+    align-self: flex-start;
+} */
+
+#title {
+    width: 100%;
 }
 
-.wrapper {
-    flex-direction: column;
+h1 {
+    min-width: 2em;
+    font-size: 3em;
+    text-shadow: 2px 2px red, -2px -2px blue, 3px -1px green;
 }
 
-/*.row {
-    flex-flow: row wrap;
-}*/
+#title h1:nth-child(odd) {
+    transform: rotate(20deg);
+}
+
+#title h1:nth-child(even) {
+    transform: rotate(-20deg);
+}
 
 .item {
     flex: 1;
-    padding: 5px;
-    margin: 5px;
+    padding: 0px;
+    margin: 0px;
 }
 
 div#content {
-   /* display: flex;*/
+    /*justify-content: center;*/
     z-index: 1;
-    position: fixed;
-    align-items: center;
+    position: absolute;
+    /* align-items: center;
+    align-self: center; */
+    height: 100%;
     width: 100%;
 }
 
 div#sm-links {
-    flex-flow: row nowrap;
     font-size: 5em;
     mix-blend-mode: difference;
-    position: fixed;
-    top: 90%;
+   /* position: absolute;
+    align-items: center;
+    top: 90%;*/
 }
 
 /* TODO: Add interactive CSS for social media links */
