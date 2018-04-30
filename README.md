@@ -1,5 +1,5 @@
 # ✨ Jay's Portfolio Website WIP ✨
-Will Jay have a decent portfolio site at some point? 🧐 Let's find out! 🌸
+Will Jay have a decent portfolio site at some point? 🤔 Let's find out! 🌸
 ---
 This website is a work in progress! I plan to have the following features in my website:
 - Project + Art Gallery
