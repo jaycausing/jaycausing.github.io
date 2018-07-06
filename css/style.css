@@ -60,4 +60,13 @@ div#sm-links {
     mix-blend-mode: difference;
 }
 
+.project-img {
+    max-width: 200px;
+}
+
+.project-summary {
+    height: 200px;
+    background-color: powderblue;
+}
+
 /* TODO: Add interactive CSS for social media links */
