@@ -1,4 +1,4 @@
-body {
+/*body {
     padding: 0px;
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
@@ -42,13 +42,13 @@ div.wrapper {
     width: 100%;
 }
 
-div#content {
+div#content {*/
     /*justify-content: center;*/
-    z-index: 1;
-    position: absolute;
+    /*z-index: 1;
+    position: absolute;*/
     /* align-items: center;
     align-self: center; */
-    height: 100%;
+    /*height: 100%;
     width: 100%;
 }
 
@@ -58,6 +58,6 @@ div#sm-links {
     bottom: 5%;
     font-size: 5em;
     mix-blend-mode: difference;
-}
+}*/
 
-/* TODO: Add interactive CSS for social media links */
+/* FIXME: The entire front page needs fixing lmao */
