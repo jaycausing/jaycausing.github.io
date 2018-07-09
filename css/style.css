@@ -1,66 +1,7 @@
-/*body {
-    padding: 0px;
-    margin: 0px;
+/* --- INDEX PAGE --- */
+body {
     font-family: 'Open Sans', sans-serif;
 }
-
-canvas {
-    padding: 0px;
-    margin: 0px;
-    background: linear-gradient(#ff3300, #0033ff);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#title {
-    width: 100%;
-}
-
-h1 {
-    min-width: 2em;
-    font-size: 3em;
-    text-shadow: 2px 2px red, -2px -2px blue, 3px -1px green;
-}
-
-#title h1:nth-child(odd) {
-    transform: rotate(20deg);
-}
-
-#title h1:nth-child(even) {
-    transform: rotate(-20deg);
-}
-
-.item {
-    flex: 1;
-    padding: 0px;
-    margin: 0px;
-}
-
-div.wrapper {
-    height: 100%;
-    width: 100%;
-}
-
-div#content {*/
-    /*justify-content: center;*/
-    /*z-index: 1;
-    position: absolute;*/
-    /* align-items: center;
-    align-self: center; */
-    /*height: 100%;
-    width: 100%;
-}
-
-div#sm-links {
-    width: 100%;
-    position: absolute;
-    bottom: 5%;
-    font-size: 5em;
-    mix-blend-mode: difference;
-}*/
-
-/* FIXME: The entire front page needs fixing lmao */
 
 #index-body {
     padding: 0px;
@@ -125,4 +66,43 @@ div#index-link-row {
     mix-blend-mode: multiply;
     top: 40%;
     position: absolute;
+}
+
+/* --- END OF INDEX PAGE --- */
+
+/* --- PROJECT SUMMARY LIST PAGE --- */
+
+.project-summary {
+    margin: 10px;
+    border: 1px solid;
+    display: flex;
+    align-content: center;
+}
+
+.project-summary > div {
+    margin: 10px;
+    flex: 1;
+}
+
+.project-img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.project-text > h1 {
+    font: italic 3em 'Amiri', serif;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#title {
+    background-color: cyan;
+}
+
+#navigation div{
+    background: linear-gradient(magenta, yellow);
+}
+
+#navigation div:nth-child(2){
+    background: linear-gradient(yellow, magenta);
 }
