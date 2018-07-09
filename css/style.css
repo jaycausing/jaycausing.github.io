@@ -85,8 +85,8 @@ div#index-link-row {
 }
 
 .project-img {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 250px;
+    max-width: 250px;
 }
 
 .project-text > h1 {
@@ -95,14 +95,11 @@ div#index-link-row {
     margin-bottom: 10px;
 }
 
-#title {
-    background-color: cyan;
+.page-header {
+    display: flex;
+    align-content: center;
 }
 
-#navigation div{
-    background: linear-gradient(magenta, yellow);
-}
-
-#navigation div:nth-child(2){
-    background: linear-gradient(yellow, magenta);
+#page-header a:link {
+    text-decoration: none;
 }
