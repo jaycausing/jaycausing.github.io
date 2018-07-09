@@ -62,7 +62,17 @@ div#sm-links {
 
 /* FIXME: The entire front page needs fixing lmao */
 
-#threejs {
+#index-body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#canvas {
     padding: 0px;
     margin: 0px;
     background: linear-gradient(#ff3300, #0033ff);
@@ -84,4 +94,35 @@ div#sm-links {
     min-width: 2em;
     font-size: 3em;
     text-shadow: 2px 2px red, -2px -2px blue, 3px -1px green;
+}
+
+div#sm-links {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    font-size: 5em;
+}
+
+.index-link span {
+    font: italic 5em 'Amiri', serif;
+}
+
+.index-link a:link {
+    color:black;
+    text-shadow: 2px 2px yellow, -2px -2px cyan, 3px -1px white;
+    text-decoration: none;
+}
+
+.index-link a:visited {
+    color:white;
+    text-shadow: 2px 2px yellow, -2px -2px cyan, 3px -1px black;
+    text-decoration: none;
+}
+
+div#index-link-row {
+    width: 100%;
+    background-color: magenta;
+    mix-blend-mode: multiply;
+    top: 40%;
+    position: absolute;
 }
