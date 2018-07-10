@@ -1,4 +1,5 @@
 /* --- INDEX PAGE --- */
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -68,8 +69,6 @@ div#index-link-row {
     position: absolute;
 }
 
-/* --- END OF INDEX PAGE --- */
-
 /* --- PROJECT SUMMARY LIST PAGE --- */
 
 .project-summary {
@@ -102,4 +101,30 @@ div#index-link-row {
 
 #page-header a:link {
     text-decoration: none;
+}
+
+/* --- ABOUT ME PAGE --- */
+img.pic-of-me {
+    max-width: 500px;
+    max-height: 750px;
+}
+
+article.aboutme h1 {
+    font: italic 3em 'Amiri', serif;
+    text-shadow: 2px 2px magenta, -2px -2px cyan;
+    margin: 0;
+}
+
+article.aboutme {
+    text-align: left;
+}
+
+img.pic-of-me {
+    padding: 2em;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
